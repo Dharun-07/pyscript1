@@ -31,18 +31,19 @@ try:
         while True:
             try:
                 data = s.recv(1024)
-                playing_stream.write(data)
-            except:
-                pass
+            except KeyboardInterrupt:
+                sock.close()
+                break
 
 
     def send_data_to_server():
         while True:
             try:
-                data = recording_stream.read(1024)
-                s.sendall(data)
-            except:
-                pass
+                data = recording_stream.read(16200)
+                sock.sendall(data)
+            except KeyboardInterrupt:
+                sock.close()
+                break
 
             # start threads
     receive_thread = threading.Thread(target=receive_server_data)
@@ -50,7 +51,7 @@ try:
     receive_thread.start()
     send_data_to_server()
 except KeyboardInterrupt:
-    s.close()
+    sock.close()
 
 
 

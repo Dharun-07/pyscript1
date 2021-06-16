@@ -1,0 +1,128 @@
+body{
+    background-image: url('../images/bg1.PNG');
+    overflow:hidden;
+    background-size:cover;
+    height:100%;
+
+}
+.topnav a {
+    float:left;
+    color: rgb(7, 219, 18);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.topnav a:hover {
+    background-color: rgb(72, 66, 102);
+    color: black;
+}
+  
+.topnav a.active {
+    background-image: linear-gradient(45deg,black,green,black);
+    color: rgb(23, 182, 31);
+}
+.text{
+  position: relative;
+  top:250px;
+
+}
+intro{
+    text-align: center;
+    color:rgb(0, 255, 13);
+    position:absolute;
+    top:40%;
+    left:5%;
+    opacity: 2;
+}
+.quote{
+  color: hsla(214, 99%, 79%, 1);
+  opacity:0.5;
+}
+.content{
+  height: 75%;
+  width: 100%;
+}
+.more{
+  margin:auto;
+  border-radius: 75%;
+  top:200px;
+  border-width: 10px;
+  background-image:  linear-gradient(45deg,black,green,black);
+  animation-name: bounce;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  color:rgb(108, 2, 247);
+  border-color: rgb(95, 90, 167);
+  padding: 1%;
+}
+h1{
+  text-shadow: 5px 6px 5px rgb(69, 69, 122);
+}
+@keyframes bounce{
+  0%{
+    padding:1%;
+    opacity:1;
+    background-image:  linear-gradient(45deg,black,rgb(25, 219, 25),black);
+  }
+  25%{
+    padding:2%;
+    opacity:0.6;
+    background-image:  linear-gradient(45deg,rgb(0, 0, 0),rgb(10, 248, 22),black);
+  }
+  50%{
+    padding:2%;
+    opacity:0.3;
+    background-image:  linear-gradient(45deg,black,rgb(0, 255, 13),black);
+  }
+  75%{
+    padding:2%;
+    opacity:0.6;
+    background-image:  linear-gradient(45deg,black,rgb(4, 255, 25),black);
+  }
+  100%{
+    padding:1%;
+    opacity:1;
+    background-image:  linear-gradient(45deg,black,rgb(14, 236, 14),black);
+  }
+}
+.knowmore{
+  padding: 100px;
+}
+#text{
+  padding-bottom: 500px;
+}
+@media(max-width: 300px){
+  .quote{
+    display:none;
+  }
+  .more{
+    position:relative;
+    top:300px;
+  }
+}
+@media(max-width: 1024px){
+  body{
+    background-image: url('../images/bg1.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    height:auto;
+  }
+  .intro{
+      text-align: center;
+    color:rgb(7, 219, 18);
+    position:absolute;
+    top:40%;
+    left:2%;
+    opacity: 2;
+    }
+  .quote{
+    color: hsla(214, 99%, 79%, 1)
+    opacity:0.5;
+  }
+  
+}
